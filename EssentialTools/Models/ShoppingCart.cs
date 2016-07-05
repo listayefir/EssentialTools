@@ -7,14 +7,14 @@ namespace EssentialTools.Models
 {
     public class ShoppingCart
     {
-        private ValueCalculator calc;
+        private IValueCalculator calc;
 
-        public ShoppingCart (ValueCalculator calcParam)
+        public ShoppingCart (IValueCalculator calcParam)
         {
             calc = calcParam;
         }
 
-        public IEnumerable<Product> Products { get; set; };
+        public IEnumerable<Product> Products { get; set; }
 
         public decimal CalculateProductTotal()
         {
